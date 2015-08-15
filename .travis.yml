@@ -1,0 +1,25 @@
+# Install
+
+# travis doesn't support zsh, find a way to install it
+before_install:
+    - git --version
+    - which zsh && zsh --version; true
+
+install:
+    - true
+
+after_install: true
+
+# Script
+# TODO: Load ErikBjare/dotfiles and run setup.sh script
+#       - Ensure exit code is zero and that symlinks are present
+#       - Check for files in backup folder, so that nothing is lost
+#       -
+
+before_script: true
+
+script:
+    - echo 'echo $EDITOR' | bash
+#   - echo -e 'y\n' | ./setup.sh
+
+after_script: true
